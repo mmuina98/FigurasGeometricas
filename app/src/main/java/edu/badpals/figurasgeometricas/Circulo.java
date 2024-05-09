@@ -1,6 +1,8 @@
 package edu.badpals.figurasgeometricas;
 
-public class Circulo extends FiguraGeometrica{
+import edu.badpals.figurasgeometricas.drawable.Drawable;
+
+public class Circulo extends FiguraGeometrica implements Drawable {
 
     private final Double PI = 3.14;
 
@@ -26,5 +28,10 @@ public class Circulo extends FiguraGeometrica{
     @Override
     public double area() {
         return PI * getRadio()*getRadio();
+    }
+
+    @Override
+    public String draw() {
+        return "Esto es un: "+ getNombre();
     }
 }

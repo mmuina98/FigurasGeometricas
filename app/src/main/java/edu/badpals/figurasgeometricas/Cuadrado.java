@@ -1,6 +1,8 @@
 package edu.badpals.figurasgeometricas;
 
-public class Cuadrado extends FiguraGeometrica{
+import edu.badpals.figurasgeometricas.drawable.Drawable;
+
+public class Cuadrado extends FiguraGeometrica implements Drawable {
 
 
     private Double lado = 0.0;
@@ -29,4 +31,13 @@ public class Cuadrado extends FiguraGeometrica{
     }
 
 
+    @Override
+    public String draw() {
+        return "Esto es un: "+ getNombre();
+    }
+
+    @Override
+    public void applyTheme() {
+        Drawable.super.applyTheme();
+    }
 }

@@ -1,6 +1,8 @@
 package edu.badpals.figurasgeometricas;
 
-public class Elipse extends FiguraGeometrica {
+import edu.badpals.figurasgeometricas.drawable.Drawable;
+
+public class Elipse extends FiguraGeometrica implements Drawable {
 
     private final double PI = 3.14;
     private double semiejeMayor = 0.0;
@@ -37,4 +39,13 @@ public class Elipse extends FiguraGeometrica {
         this.semiejeMenor = semiejeMenor;
     }
 
+    @Override
+    public String draw() {
+        return "Esto es una: "+ getNombre();
+    }
+
+    @Override
+    public void applyTheme() {
+        Drawable.super.applyTheme();
+    }
 }

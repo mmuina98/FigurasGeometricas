@@ -1,6 +1,8 @@
 package edu.badpals.figurasgeometricas;
 
-public class Rectangulo extends FiguraGeometrica{
+import edu.badpals.figurasgeometricas.drawable.Drawable;
+
+public class Rectangulo extends FiguraGeometrica implements Drawable {
 
 
     private Double altura = 0.0;
@@ -39,4 +41,8 @@ public class Rectangulo extends FiguraGeometrica{
     }
 
 
+    @Override
+    public String draw() {
+        return "Esto es un: "+ getNombre();
+    }
 }

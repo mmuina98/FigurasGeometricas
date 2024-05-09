@@ -1,5 +1,6 @@
 package edu.badpals.figurasgeometricas;
 
+import edu.badpals.figurasgeometricas.drawable.Drawable;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -24,6 +25,13 @@ public class RectanguloTest {
         Rectangulo rectangulo = new Rectangulo("rectangulo",2.0,3.0);
         assertEquals("rectangulo" ,rectangulo.getNombre());
         assertEquals(6 ,rectangulo.area());
+    }
+
+    @Test
+    public void circuloDrawableTest(){
+        FiguraGeometrica circulo = new Circulo("Circulo",10.0);
+
+        assertEquals("Esto es un: Circulo", ((Drawable)circulo).draw());
     }
 
 }
